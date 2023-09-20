@@ -1,0 +1,39 @@
+﻿namespace Week4Lecture;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int N = Convert.ToInt16(Console.ReadLine());
+        string shape = Console.ReadLine();
+        Console.WriteLine($"N is: {N}; shape is {shape}");
+        if(shape == "left"){
+            for(int row = 0; row<N; row++)
+            {
+                for(int col = 0; col<N; col++)
+                {
+                    if(row>=col)
+                    Console.Write('*');
+                }
+            Console.WriteLine("");
+            }
+        }
+        else{//shape == "right"
+            for(int row = 1; row<=N; row++)
+            {
+                for(int col = 1; col<=N; col++)
+                {
+                    if(col<=N-row){
+                        Console.Write(" ");
+                    }
+                    else{
+                        Console.Write('*');
+                    }
+                }
+                Console.WriteLine();
+            }
+            
+        }
+
+    }
+}
