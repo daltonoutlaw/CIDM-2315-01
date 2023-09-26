@@ -6,6 +6,7 @@ class Program
     {
         int a = Convert.ToInt16(Console.ReadLine());
         int b = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine($"a = {a}; b = {b}");
 
         Max(a,b);
     }
